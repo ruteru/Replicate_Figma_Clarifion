@@ -17,18 +17,28 @@ export const logo_styles = StyleSheet.create({
     },
 });
 
-export const styles = StyleSheet.create({
+export const news_styles = StyleSheet.create({
     newsContainer: {
         width: '100%',
         height: '10%',
         backgroundColor: '#252f3d',
         justifyContent: 'center',
         alignItems: 'center',
-    },
+        flexDirection: 'row',
+        overflow: 'hidden',
+      },
     newsText: {
+        marginLeft: 10,
         color: '#fff',
         fontSize: 20,
-        fontWeight: 'bold',
+        fontFamily: 'Bond',
+    },
+    newsBlock: {
+        marginLeft: 30,
+        justifyContent: 'center',
+        alignItems: 'center',
+        flexDirection: 'row',
+        overflow: 'hidden',
     },
 });
 
