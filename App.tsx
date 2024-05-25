@@ -3,9 +3,9 @@ import { View, Text, Image, Platform } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 import Header from './App/Component/Header';
 import NewsSection from './App/Component/newsSection';
-import { useCustomFonts } from './App/Styles/useCustomFonts';
-import { index_styles, body_styles } from './App/Styles/styles';
 import ProgressSteps from './App/Component/ProgressSteps';
+import { useCustomFonts } from './App/Styles/useCustomFonts';
+import { index_styles, body_styles, specialOffer_styles } from './App/Styles/styles';
 
 export default function App() {
   const fontsLoaded = useCustomFonts();
@@ -23,6 +23,7 @@ export default function App() {
         <ProgressSteps />
         <View style={body_styles.specialOfferContainer}>
           <Text style={body_styles.specialOfferTitle}>ONE TIME ONLY special price for 6 extra Clarifion for only $14 each ($84.00 total!)</Text>
+          <Image source={require('./assets/img/ProductImage.png')} style={specialOffer_styles.specialOfferImage} resizeMode='contain' />
         </View>
       </View>
       <StatusBar style="auto" />
