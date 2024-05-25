@@ -1,13 +1,15 @@
 import * as React from "react";
+import Svg, { Path, Circle } from 'react-native-svg'
+
 const SvgDone = (props) => (
-  <svg
+  <Svg
     xmlns="http://www.w3.org/2000/svg"
     width={41}
     height={40}
     fill="none"
     {...props}
   >
-    <circle
+    <Circle
       cx={20.667}
       cy={20}
       r={19}
@@ -15,13 +17,13 @@ const SvgDone = (props) => (
       stroke="#85BF55"
       strokeWidth={2}
     />
-    <path
+    <Path
       stroke="#fff"
       strokeLinecap="round"
       strokeLinejoin="round"
       strokeWidth={2.5}
       d="m10.666 20 6.66 7 13.34-14"
     />
-  </svg>
+  </Svg>
 );
 export default SvgDone;
