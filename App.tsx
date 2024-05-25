@@ -17,14 +17,14 @@ export default function App() {
   return (
     <View style={index_styles.container}>
       <ScrollView>
-        <NewsSection /> {/* has svgr components */}
-        <Header /> {/* has svgr components */}
+        <NewsSection /> 
+        <Header /> 
         <View style={body_styles.bodyContainer}>
           <Text style={body_styles.Title}>Wait! Your order is in progress.</Text>
           <Text style={body_styles.subTitle}>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</Text>
-          <ProgressSteps /> {/* has svgr components */}
+          <ProgressSteps /> 
             <View style={specialOffer_styles.specialOfferContainer}>
-              <ProductImage /> {/* this is a svgr component */}
+              <ProductImage /> 
               <Text style={specialOffer_styles.specialOfferTitle}>
                 ONE TIME ONLY special price for 6 extra Clarifion for only $14 each ($84.00 total!)
               </Text>
