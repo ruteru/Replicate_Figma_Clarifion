@@ -10,8 +10,8 @@ const SvgProductImage = (props) => (
   <Svg
     xmlns="http://www.w3.org/2000/svg"
     xmlnsXlink="http://www.w3.org/1999/xlink"
-    width={Platform.OS === 'web' ? "50%" : "20%"}
-    height={Platform.OS === 'web' ? "50%" : "20%"}
+    width={Platform.OS === 'web' ? "50%" : "50%"}
+    height={Platform.OS === 'web' ? "50%" : "50%"}
     viewBox={`0 0 ${OriginalWidth} ${OriginalHeight}`}
     style={{ width: windowWidth, aspectRatio }}
     fill="none"

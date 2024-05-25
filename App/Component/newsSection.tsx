@@ -12,26 +12,20 @@ const NewsSection = () => {
   useEffect(() => {
     if (fontsLoaded && Platform.OS !== 'web') {
       const animate = () => {
-        translateX.setValue(screenWidth*2);
+        translateX.setValue(0); // Start from the initial position
         Animated.loop(
-          Animated.sequence([
-            Animated.timing(translateX, {
-              toValue: -screenWidth*3,
-              duration: 10000,
-              easing: Easing.linear,
-              useNativeDriver: true,
-            }),
-            Animated.timing(translateX, {
-              toValue: screenWidth,
-              duration: 0,
-              useNativeDriver: true,
-            }),
-          ])
+          Animated.timing(translateX, {
+            toValue: -screenWidth * 2, // Move past both sets of news items
+            duration: 20000, // Adjust duration as needed
+            easing: Easing.linear, // Linear easing for smooth scrolling
+            useNativeDriver: true, // Use native driver for better performance
+          })
         ).start();
       };
+
       animate();
     }
-  }, [translateX, screenWidth*3]);
+  }, [translateX, screenWidth, fontsLoaded]);
 
   return (
     <View style={news_styles.newsContainer}>

@@ -2,14 +2,13 @@ import { StyleSheet, Platform, Dimensions } from 'react-native';
 
 export const header_styles = StyleSheet.create({
     headerContainer: {
-        flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
     },
     logoContainer: {
         position: 'absolute',
-        top: Platform.OS === 'web' ? 10 : 80,
-        left: Platform.OS === 'web' ? 45 : 0,
+        top: Platform.OS === 'web' ? 10 : 50,
+        left: Platform.OS === 'web' ? 45 : 20,
         width: Platform.OS === 'web' ? '18%' : '13%',
         height: Platform.OS === 'web' ? '18%' : '10%',
         justifyContent: 'center',
@@ -17,8 +16,8 @@ export const header_styles = StyleSheet.create({
     },
     secureContainer: {
         position: 'absolute',
-        top: Platform.OS === 'web' ? 10 : 80,
-        right: Platform.OS === 'web' ? 45 : 600,
+        top: Platform.OS === 'web' ? 10 : 50,
+        right: Platform.OS === 'web' ? 45 : 380,
         width: Platform.OS === 'web' ? '18%' : '65%',
         height: Platform.OS === 'web' ? '18%' : '10%',
         justifyContent: 'center',
@@ -33,8 +32,8 @@ export const body_styles = StyleSheet.create({
         alignItems: 'center',
         height: '100%',
         width: body_width,
-        marginTop: Platform.OS === 'web' ? 100 : 60,
-        flex: 2,
+        marginTop: Platform.OS === 'web' ? 100 : 40,
+        flexDirection: 'column',
     },
     Title: {
         marginTop: 10,
@@ -53,7 +52,7 @@ export const body_styles = StyleSheet.create({
     },
     progressBarContainer: {
         margin: 20,
-        gap: Platform.OS === 'web' ? 200 : 10,
+        gap: Platform.OS === 'web' ? 200 : 20,
         justifyContent: 'space-between',
         alignContent: 'center',
         flexDirection: 'row',
@@ -120,7 +119,7 @@ export const specialOffer_styles = StyleSheet.create({
 
 export const news_styles = StyleSheet.create({
     newsContainer: {
-        width: Platform.OS === 'web' ? '100%' : '90%',
+        width: Platform.OS === 'web' ? '100%' : '50%',
         height: Platform.OS === 'web' ? '5%' : '12%',
         backgroundColor: '#252F3D',
         justifyContent: 'space-between',

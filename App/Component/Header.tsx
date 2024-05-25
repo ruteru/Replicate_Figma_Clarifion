@@ -6,12 +6,8 @@ import { ClarifionLogo, Frame_Security } from '../Assets/svgr';
 const Header = () => {
   return (
     <>
-      <View style={header_styles.logoContainer}>
-        <ClarifionLogo />
-      </View>
-      <View style={header_styles.secureContainer}>
-        <Frame_Security />
-      </View>
+      <ClarifionLogo style={header_styles.logoContainer} />
+      <Frame_Security style={header_styles.secureContainer} />
     </>
   );
 };
