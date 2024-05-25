@@ -1,8 +1,8 @@
-// App/Components/NewsSection.tsx
 import React, { useEffect, useRef } from 'react';
 import { View, Text, Image, Platform, Animated, Easing, Dimensions } from 'react-native';
 import { news_styles } from '../Styles/styles';
 import { useCustomFonts } from '../Styles/useCustomFonts';
+
 const NewsSection = () => {
   const fontsLoaded = useCustomFonts();
   const translateX = useRef(new Animated.Value(0)).current;

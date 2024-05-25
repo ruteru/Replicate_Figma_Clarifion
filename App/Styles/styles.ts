@@ -85,6 +85,14 @@ export const body_styles = StyleSheet.create({
         fontSize: 24,
         fontWeight: '400',
     },
+    
+})
+
+export const specialOffer_styles = StyleSheet.create({
+    specialOfferImage: {
+        width: '100%',
+        height: '100%',
+    },
 })
 
 export const secure_styles = StyleSheet.create({
