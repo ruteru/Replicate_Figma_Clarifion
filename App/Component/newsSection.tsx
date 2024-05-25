@@ -12,11 +12,11 @@ const NewsSection = () => {
   useEffect(() => {
     if (fontsLoaded && Platform.OS !== 'web') {
       const animate = () => {
-        translateX.setValue(screenWidth);
+        translateX.setValue(screenWidth*2);
         Animated.loop(
           Animated.sequence([
             Animated.timing(translateX, {
-              toValue: -screenWidth,
+              toValue: -screenWidth*3,
               duration: 10000,
               easing: Easing.linear,
               useNativeDriver: true,
@@ -31,7 +31,7 @@ const NewsSection = () => {
       };
       animate();
     }
-  }, [translateX, screenWidth]);
+  }, [translateX, screenWidth*3]);
 
   return (
     <View style={news_styles.newsContainer}>
