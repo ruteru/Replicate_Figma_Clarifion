@@ -13,18 +13,20 @@
     "@expo/vector-icons": "^14.0.0",
     "@react-native/metro-config": "^0.74.83",
     "expo": "~51.0.8",
+    "expo-font": "~12.0.5",
+    "expo-splash-screen": "~0.27.4",
     "expo-status-bar": "~1.12.1",
     "expo-system-ui": "~3.0.4",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-native": "0.74.1",
-    "react-native-web": "~0.19.10",
-    "expo-font": "~12.0.5",
-    "expo-splash-screen": "~0.27.4"
+    "react-native-svg": "^15.2.0",
+    "react-native-web": "~0.19.10"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
     "@types/react": "~18.2.45",
+    "react-native-svg-transformer": "^1.4.0",
     "typescript": "^5.3.3"
   },
   "private": true
