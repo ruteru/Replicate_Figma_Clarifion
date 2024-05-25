@@ -11,8 +11,8 @@ const SvgClarifionLogo = (props) => (
   <Svg
     xmlns="http://www.w3.org/2000/svg"
     xmlnsXlink="http://www.w3.org/1999/xlink"
-    width= { Platform.OS === 'web' ? "20%" : "20%"}
-    height= { Platform.OS === 'web' ? "20%" : "20%"}
+    width= { Platform.OS === 'web' ? "20%" : "30%"}
+    height= { Platform.OS === 'web' ? "20%" : "30%"}
     viewBox={`0 0 ${OriginalWidth} ${OriginalHeight}`}
     style={{ width: windowWidth, aspectRatio }}
     fill="none"

@@ -1,31 +1,43 @@
-import { StyleSheet, Platform } from 'react-native';
+import { StyleSheet, Platform, Dimensions } from 'react-native';
 
-export const logo_styles = StyleSheet.create({
+export const header_styles = StyleSheet.create({
+    headerContainer: {
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
     logoContainer: {
         position: 'absolute',
-        top: Platform.OS === 'web' ? 10 : 75,
-        left: Platform.OS === 'web' ? 45 : 10,
-        width: Platform.OS === 'web' ? '18%' : '40%',
+        top: Platform.OS === 'web' ? 10 : 80,
+        left: Platform.OS === 'web' ? 45 : 0,
+        width: Platform.OS === 'web' ? '18%' : '13%',
         height: Platform.OS === 'web' ? '18%' : '10%',
         justifyContent: 'center',
         alignItems: 'center',
     },
-    logo: {
-        width: '100%',
-        height: '100%',
+    secureContainer: {
+        position: 'absolute',
+        top: Platform.OS === 'web' ? 10 : 80,
+        right: Platform.OS === 'web' ? 45 : 600,
+        width: Platform.OS === 'web' ? '18%' : '65%',
+        height: Platform.OS === 'web' ? '18%' : '10%',
+        justifyContent: 'center',
+        alignItems: 'center',
     },
 });
 
+const body_width = Dimensions.get('window').width;
 export const body_styles = StyleSheet.create({
     bodyContainer: {
         justifyContent: 'center',
         alignItems: 'center',
         height: '100%',
-        width: '100%',
+        width: body_width,
         marginTop: Platform.OS === 'web' ? 100 : 60,
         flex: 2,
     },
     Title: {
+        marginTop: 10,
         color: '#000000',
         fontSize: Platform.OS === 'web' ? 48 : 32,
         textAlign: 'center',
@@ -41,7 +53,7 @@ export const body_styles = StyleSheet.create({
     },
     progressBarContainer: {
         margin: 20,
-        gap: 200,
+        gap: Platform.OS === 'web' ? 200 : 10,
         justifyContent: 'space-between',
         alignContent: 'center',
         flexDirection: 'row',
@@ -63,9 +75,9 @@ export const body_styles = StyleSheet.create({
         fontFamily: 'Manrope-Bold',
     },
     progressBarImg: {
-        marginBottom: 10,
+        marginBottom: Platform.OS === 'web' ? 10 : 0,
         width: 24,
-        height: 24,
+        height: Platform.OS === 'web' ? 24 : 0,
     },
     progressBarTitle: {
         fontSize: 12,
@@ -106,26 +118,10 @@ export const specialOffer_styles = StyleSheet.create({
     }
 })
 
-export const secure_styles = StyleSheet.create({
-    secureContainer: {
-        position: 'absolute',
-        top: Platform.OS === 'web' ? 10 : 75,
-        right: Platform.OS === 'web' ? 45 : 10,
-        width: Platform.OS === 'web' ? '18%' : '40%',
-        height: Platform.OS === 'web' ? '18%' : '10%',
-        justifyContent: 'center',
-        alignItems: 'center',
-    },
-    secure: {
-        width: '100%',
-        height: '100%',
-    },
-})
-
 export const news_styles = StyleSheet.create({
     newsContainer: {
-        width: '100%',
-        height: '5%',
+        width: Platform.OS === 'web' ? '100%' : '90%',
+        height: Platform.OS === 'web' ? '5%' : '12%',
         backgroundColor: '#252F3D',
         justifyContent: 'space-between',
         alignItems: 'center',
@@ -141,6 +137,12 @@ export const news_styles = StyleSheet.create({
     },
     newsBlock: {
         width: Platform.OS === 'web' ? '25%' : '100%',
+        justifyContent: 'center',
+        alignItems: 'center',
+        flexDirection: 'row',
+        overflow: 'hidden',
+    },
+    newsContent: {
         justifyContent: 'center',
         alignItems: 'center',
         flexDirection: 'row',

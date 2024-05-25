@@ -19,6 +19,7 @@ export default function App() {
       <ScrollView>
         <NewsSection /> 
         <Header /> 
+        
         <View style={body_styles.bodyContainer}>
           <Text style={body_styles.Title}>Wait! Your order is in progress.</Text>
           <Text style={body_styles.subTitle}>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</Text>
