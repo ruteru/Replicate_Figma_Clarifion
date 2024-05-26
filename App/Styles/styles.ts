@@ -144,6 +144,7 @@ export const specialOffer_styles = StyleSheet.create({
         width: '100%',
     },
     singleString: {
+        marginTop: 15,
         fontSize: 32,
         flexDirection: 'row',
         width: '100%',
