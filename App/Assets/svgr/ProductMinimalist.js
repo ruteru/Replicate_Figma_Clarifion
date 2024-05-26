@@ -1,10 +1,19 @@
 import * as React from "react";
+import { Dimensions, Platform } from "react-native";
+
+
+const OriginalWidth = 134
+const OriginalHeight = 135
+const aspectRatio = OriginalWidth / OriginalHeight;
+const windowWidth = Dimensions.get("window").width;
 const SvgProductMinimalist = (props) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     xmlnsXlink="http://www.w3.org/1999/xlink"
-    width={134}
-    height={135}
+    width={Platform.OS === 'web' ? "100%" : "50%"}
+    height={Platform.OS === 'web' ? "100%" : "50%"}
+    viewBox={`0 0 ${OriginalWidth} ${OriginalHeight}`}
+    style={{ width: windowWidth, aspectRatio }}
     fill="none"
     {...props}
   >

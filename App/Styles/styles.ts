@@ -1,42 +1,36 @@
-import { StyleSheet, Platform, Dimensions } from 'react-native';
+import { StyleSheet, Platform } from 'react-native';
 
 export const header_styles = StyleSheet.create({
-    headerContainer: {
-        justifyContent: 'center',
-        alignItems: 'center',
-    },
     logoContainer: {
         position: 'absolute',
-        top: Platform.OS === 'web' ? 10 : 50,
+        top: Platform.OS === 'web' ? 100 : 50,
         left: Platform.OS === 'web' ? 45 : 20,
         width: Platform.OS === 'web' ? '18%' : '13%',
-        height: Platform.OS === 'web' ? '18%' : '10%',
+        height: Platform.OS === 'web' ? '5%' : '10%',
         justifyContent: 'center',
         alignItems: 'center',
     },
     secureContainer: {
         position: 'absolute',
-        top: Platform.OS === 'web' ? 10 : 50,
+        top: Platform.OS === 'web' ? 100 : 50,
         right: Platform.OS === 'web' ? 45 : 380,
         width: Platform.OS === 'web' ? '18%' : '65%',
-        height: Platform.OS === 'web' ? '18%' : '10%',
+        height: Platform.OS === 'web' ? '5%' : '10%',
         justifyContent: 'center',
         alignItems: 'center',
     },
 });
 
-const body_width = Dimensions.get('window').width;
 export const body_styles = StyleSheet.create({
     bodyContainer: {
+        top: 5,
         justifyContent: 'center',
         alignItems: 'center',
-        height: '100%',
-        width: body_width,
+        height: '50%',
+        width: Platform.OS === 'web' ? '95%' : 'auto',
         marginTop: Platform.OS === 'web' ? 100 : 40,
-        flexDirection: 'column',
     },
     Title: {
-        marginTop: 10,
         color: '#000000',
         fontSize: Platform.OS === 'web' ? 48 : 32,
         textAlign: 'center',
@@ -94,18 +88,32 @@ export const body_styles = StyleSheet.create({
 export const specialOffer_styles = StyleSheet.create({
     specialOfferContainer: {
         width: '90%',
+        height: Platform.OS === 'web' ? '60%' : 60,
         backgroundColor: '#FAFAFA',
         borderRadius: 10,
         flexDirection: 'row',
         alignItems: 'center',
-        padding: 10,
-    },
-    specialOfferTitle: {
         justifyContent: 'center',
+    },
+    textBlue: {
+        color: '#2C7EF8',
+        flexDirection: 'row',
+        width: '100%',
+    },
+    textBlack: {
+        color: '#000000',
+        flexDirection: 'row',
+        width: '100%',
+    },
+    singleString: {
+        fontSize: 32,
+        flexDirection: 'row',
+        width: '100%',
+        textAlign: 'left',
+        marginEnd: 10,
         alignItems: 'center',
-        fontSize: 24,
+        marginBottom: 20,
         fontWeight: '400',
-        width: '30%',
     },
     specialOfferImageContainer: {
         width: '24%',
@@ -117,8 +125,111 @@ export const specialOffer_styles = StyleSheet.create({
     }
 })
 
+export const columns_styles = StyleSheet.create({
+    container: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        width: '100%',
+        height: '100%',
+        borderRadius: 10,
+        overflow: 'hidden',
+    },
+    column1: {
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center',
+        width: '50%',
+        height: '90%',
+    },
+    column2: {
+        flexDirection: 'column',
+        justifyContent: 'flex-start',
+        alignItems: 'center',
+        width: '50%',
+        height: '90%',
+    },
+})
+
+export const mini_product_styles = StyleSheet.create({
+    miniProductContainer: {
+        flexDirection: 'row',
+        justifyContent: 'center',
+        alignItems: 'center',
+        width: '100%',
+        height: '30%',
+    },
+    column1: {
+        justifyContent: 'center',
+        alignItems: 'center',
+        width: '30%',
+        height: '100%',
+    },
+    column2: {
+        flexDirection: 'column',
+        justifyContent: 'space-between',
+        alignItems: 'flex-start',
+        width: '70%',
+        height: '100%',
+    },
+    miniProductTitle: {
+        justifyContent: 'center',
+        alignItems: 'center',
+        fontSize: 24,
+        fontWeight: '400',
+        width: '30%',
+    },
+    miniProductImageContainer: {
+        width: '24%',
+        height: '24%',
+    },
+    row1:{
+        flexDirection: 'row',
+    },
+    row2:{
+        flexDirection: 'row',
+        justifyContent: 'center',
+        alignItems: 'center',
+        gap: 10,
+    },
+    price: {
+        flexDirection: 'row',
+        marginLeft: 80,
+    },
+    priceDiscounted: {
+        textDecorationLine: 'line-through',
+        textDecorationStyle: 'solid',
+        fontSize: 16,
+        color: '#969696',
+    },
+    priceActual: {
+        textDecorationStyle: 'solid',
+        textDecorationColor: 'blue',
+        fontSize: 22,
+        color: '#2C7EF8',
+    },
+    titlePrize: {
+        justifyContent: 'space-between',
+        fontWeight: '400',
+        alignItems: 'flex-start',
+        fontSize: 20,
+        lineHeight: 28,
+        color: '#000000',
+    },
+    description: {
+        fontSize: 16,
+        lineHeight: 22,
+        color: '#4D5254',
+    },
+    stars: {
+        flexDirection: 'row',
+    }
+})
+
 export const news_styles = StyleSheet.create({
     newsContainer: {
+        position: 'absolute',
+        top: 0,
         width: Platform.OS === 'web' ? '100%' : '50%',
         height: Platform.OS === 'web' ? '5%' : '12%',
         backgroundColor: '#252F3D',
@@ -155,10 +266,11 @@ export const news_styles = StyleSheet.create({
 
 export const index_styles = StyleSheet.create({
     container: {
+        fontFamily: 'Manrope-Medium',
         flex: 1,
-        backgroundColor: '#fff',
+        backgroundColor: 'white',
         alignItems: 'center',
-        justifyContent: 'center',
+        justifyContent: 'flex-start',
         width: '100%',
         height: '100%',
     },
