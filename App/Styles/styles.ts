@@ -175,6 +175,7 @@ export const columns_styles = StyleSheet.create({
         overflow: 'hidden',
     },
     column: {
+        marginRight: Platform.OS === 'web' ? 30 : 0,
         flexDirection: 'column',
         justifyContent: 'flex-start',
         alignItems: 'center',
@@ -185,7 +186,6 @@ export const columns_styles = StyleSheet.create({
 
 export const mini_product_styles = StyleSheet.create({
     miniProductContainer: {
-        backgroundColor: '#FAFAFA',
         flexDirection: 'row',
         justifyContent: 'center',
         alignItems: 'center',
