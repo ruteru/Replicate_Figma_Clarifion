@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, ScrollView } from 'react-native';
+import { View, Text, ScrollView, Platform } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 import Header from './App/Component/Header';
 import NewsSection from './App/Component/newsSection';
@@ -35,10 +35,8 @@ export default function App() {
 
           <View style={specialOffer_styles.specialOfferContainer}>
             <View style={columns_styles.container}>
-              <View style={columns_styles.column1}>
-                <ProductImage />
-              </View>
-              <View style={columns_styles.column2}>
+              {Platform.OS === 'web' ? <ProductImage /> : null}
+              <View style={columns_styles.column}>
                 <View style={specialOffer_styles.singleString}>
                   <Text style={specialOffer_styles.singleString}>
                     <Text style={specialOffer_styles.textBlue}>{blueStrings[0]}</Text>
@@ -47,6 +45,8 @@ export default function App() {
                     <Text style={specialOffer_styles.textBlack}> ({blackStrings[1]})</Text>
                   </Text>
                 </View>
+                {Platform.OS === 'web' ? null : <ProductImage />}
+
                 <View style={mini_product_styles.miniProductContainer}>
                   <View style={mini_product_styles.column1}>
                     <ProductMinimalist />

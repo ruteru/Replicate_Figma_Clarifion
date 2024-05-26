@@ -1,21 +1,60 @@
 import { StyleSheet, Platform } from 'react-native';
 
+export const news_styles = StyleSheet.create({
+    newsContainer: {
+        position: 'absolute',
+        top: 0,
+        width: Platform.OS === 'web' ? '100%' : '100%',
+        marginTop: Platform.OS === 'web' ? 0 : 30,
+        height: Platform.OS === 'web' ? '5%' : '5%',
+        backgroundColor: '#252F3D',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        flexDirection: 'row',
+        overflow: 'hidden',
+    },
+    newsText: {
+        color: '#fff',
+        fontSize: 12,
+        fontWeight: 'medium',
+        fontFamily: 'Manrope-Medium',
+        marginLeft: 10,
+    },
+    newsBlock: {
+        width: Platform.OS === 'web' ? '25%' : '100%',
+        justifyContent: 'center',
+        alignItems: 'center',
+        flexDirection: 'row',
+        overflow: 'hidden',
+    },
+    newsContent: {
+        justifyContent: 'center',
+        alignItems: 'center',
+        flexDirection: 'row',
+        overflow: 'hidden',
+    },
+    newsImage: {
+        width: 24,
+        height: 24,
+    },
+});
+
 export const header_styles = StyleSheet.create({
     logoContainer: {
         position: 'absolute',
-        top: Platform.OS === 'web' ? 100 : 50,
+        top: Platform.OS === 'web' ? 100 : '7%',
         left: Platform.OS === 'web' ? 45 : 20,
         width: Platform.OS === 'web' ? '18%' : '13%',
-        height: Platform.OS === 'web' ? '5%' : '10%',
+        height: Platform.OS === 'web' ? '5%' : '5%',
         justifyContent: 'center',
         alignItems: 'center',
     },
     secureContainer: {
         position: 'absolute',
-        top: Platform.OS === 'web' ? 100 : 50,
-        right: Platform.OS === 'web' ? 45 : 380,
-        width: Platform.OS === 'web' ? '18%' : '65%',
-        height: Platform.OS === 'web' ? '5%' : '10%',
+        top: Platform.OS === 'web' ? 100 : '7%',
+        right: Platform.OS === 'web' ? 45 : 30,
+        width: Platform.OS === 'web' ? '18%' : '13%',
+        height: Platform.OS === 'web' ? '5%' : '5%',
         justifyContent: 'center',
         alignItems: 'center',
     },
@@ -23,12 +62,11 @@ export const header_styles = StyleSheet.create({
 
 export const body_styles = StyleSheet.create({
     bodyContainer: {
-        top: 5,
+        top: Platform.OS === 'web' ? '7%' : '30%',
         justifyContent: 'center',
         alignItems: 'center',
-        height: '50%',
-        width: Platform.OS === 'web' ? '95%' : 'auto',
-        marginTop: Platform.OS === 'web' ? 100 : 40,
+        height: Platform.OS === 'web' ? '50%' : '100%',
+        width: Platform.OS === 'web' ? '95%' : '95%',
     },
     Title: {
         color: '#000000',
@@ -88,10 +126,10 @@ export const body_styles = StyleSheet.create({
 export const specialOffer_styles = StyleSheet.create({
     specialOfferContainer: {
         width: '90%',
-        height: Platform.OS === 'web' ? '60%' : 60,
+        height: Platform.OS === 'web' ? '60%' : '100%',
         backgroundColor: '#FAFAFA',
         borderRadius: 10,
-        flexDirection: 'row',
+        flexDirection: Platform.OS === 'web' ? 'row' : 'row',
         alignItems: 'center',
         justifyContent: 'center',
     },
@@ -128,31 +166,25 @@ export const specialOffer_styles = StyleSheet.create({
 export const columns_styles = StyleSheet.create({
     container: {
         flexDirection: 'row',
-        justifyContent: 'space-between',
+        justifyContent: Platform.OS === 'web' ? 'space-between' : 'center',
         alignItems: 'center',
         width: '100%',
         height: '100%',
         borderRadius: 10,
         overflow: 'hidden',
     },
-    column1: {
-        flexDirection: 'column',
-        justifyContent: 'center',
-        alignItems: 'center',
-        width: '50%',
-        height: '90%',
-    },
-    column2: {
+    column: {
         flexDirection: 'column',
         justifyContent: 'flex-start',
         alignItems: 'center',
-        width: '50%',
-        height: '90%',
+        width: Platform.OS === 'web' ? '50%' : '90%',
+        height: '100%',
     },
 })
 
 export const mini_product_styles = StyleSheet.create({
     miniProductContainer: {
+        backgroundColor: '#FAFAFA',
         flexDirection: 'row',
         justifyContent: 'center',
         alignItems: 'center',
@@ -183,10 +215,10 @@ export const mini_product_styles = StyleSheet.create({
         width: '24%',
         height: '24%',
     },
-    row1:{
+    row1: {
         flexDirection: 'row',
     },
-    row2:{
+    row2: {
         flexDirection: 'row',
         justifyContent: 'center',
         alignItems: 'center',
@@ -225,44 +257,6 @@ export const mini_product_styles = StyleSheet.create({
         flexDirection: 'row',
     }
 })
-
-export const news_styles = StyleSheet.create({
-    newsContainer: {
-        position: 'absolute',
-        top: 0,
-        width: Platform.OS === 'web' ? '100%' : '50%',
-        height: Platform.OS === 'web' ? '5%' : '12%',
-        backgroundColor: '#252F3D',
-        justifyContent: 'space-between',
-        alignItems: 'center',
-        flexDirection: 'row',
-        overflow: 'hidden',
-    },
-    newsText: {
-        color: '#fff',
-        fontSize: 12,
-        fontWeight: 'medium',
-        fontFamily: 'Manrope-Medium',
-        marginLeft: 10,
-    },
-    newsBlock: {
-        width: Platform.OS === 'web' ? '25%' : '100%',
-        justifyContent: 'center',
-        alignItems: 'center',
-        flexDirection: 'row',
-        overflow: 'hidden',
-    },
-    newsContent: {
-        justifyContent: 'center',
-        alignItems: 'center',
-        flexDirection: 'row',
-        overflow: 'hidden',
-    },
-    newsImage: {
-        width: 24,
-        height: 24,
-    },
-});
 
 export const index_styles = StyleSheet.create({
     container: {
