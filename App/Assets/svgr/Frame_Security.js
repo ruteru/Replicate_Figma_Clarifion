@@ -10,7 +10,7 @@ const SvgFrameSecurity = (props) => (
   <Svg
     xmlns="http://www.w3.org/2000/svg"
     width={Platform.OS === 'web' ? "20%" : "20%"}
-    height={Platform.OS === 'web' ? "20%" : "20%"}
+    height={Platform.OS === 'web' ? "20%" : "10%"}
     viewBox={`0 0 ${OriginalWidth} ${OriginalHeight}`}
     style={{ width: windowWidth, aspectRatio }}
     fill="none"
